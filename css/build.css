@@ -1,0 +1,139 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap);
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgb(231, 231, 231);
+}
+
+.comments {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.comments__list {
+  min-height: 300px;
+  margin: 0;
+  padding: 0;
+  border-bottom: black 1px solid;
+  margin-bottom: 10px;
+  list-style: none;
+  padding-left: 10px;
+}
+
+.comments__item {
+  position: relative;
+  background-color: #9D5CD0;
+}
+
+.comments__item::after {
+  position: absolute;
+  content: '';
+  top: -10px; left: -10px;
+  width: 0; height: 0;
+  border: 10px solid rgba(0, 0, 0, 0);
+  transform: rotate(45deg);
+  border-bottom-color: #9D5CD0;
+  z-index: 0;
+}
+
+.comments__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.comments__header {
+  background-color: black;
+  align-self: flex-start;
+  align-items: center;
+  color: white;
+  display: inline-flex;
+  border-radius: 100px;
+  top: -10px; left: -2px;
+  position: relative;
+  z-index: 2;
+  padding: 2px 30px 3px 20px;
+}
+
+.comments__name {
+  font-weight: 600;
+  margin-right: 30px;
+  font-size: 16px;
+}
+
+.comments__time {
+  font-size: 10px;
+}
+
+.comments__delete {
+  position: absolute;
+  right: 0; top: 2px;
+  background-color: #9e5cd000;
+  color: rgba(255, 255, 255, 0.4);
+  border: none;
+  font-size: 20px;
+  transition: color .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.comments__delete:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.comments__delete:focus {
+  outline: none;
+}
+
+.comments__text {
+  padding: 10px;
+  padding-top: 0;
+  color: #fff;
+  margin: 0;
+}
+
+.comments__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.comments__input {
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 100px;
+  border: black 1px solid;
+  transition: border-color .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.comments__input:focus {
+  outline: none;
+  border-color: #9D5CD0;
+}
+
+.comments__submit {
+  background-color: rgba(0, 0, 0, 0);
+  border: #9D5CD0 2px solid;
+  border-radius: 100px;
+  padding: 8px;
+  color: #9D5CD0;
+  font-weight: bold;
+  transition-property: color background-color;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.comments__submit:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #9D5CD0;
+}
+
+.comments__submit:focus {
+  outline: none;
+}
+
+.comments__submit:active {
+  border-color: #ae64e6;
+  background-color: #704194;
+}
+
